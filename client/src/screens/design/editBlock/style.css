@@ -1,0 +1,81 @@
+.edit-block-container {
+    width: 90%;
+    max-height: 90%;
+    margin: 2rem auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 10px;
+}
+
+.edit-block-container h1 {
+    margin: 0 2rem;
+    padding: 1rem 0;
+}
+
+.edit-block-container form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    grid-template-areas: 
+        "label label"
+        "width height"
+        "inputs outputs"
+        "submit cancel";
+}
+
+.edit-block-width label,
+.edit-block-height label,
+.edit-block-label label {
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.edit-block-width input,
+.edit-block-height input,
+.edit-block-label input {
+    display: block;
+    height: 1.5rem;
+}
+
+.edit-block-label {
+    grid-area: label;
+}
+
+.edit-block-width {
+    grid-area: width;
+}
+
+.edit-block-height {
+    grid-area: height;
+}
+
+.edit-block-inputs {
+    grid-area: inputs;
+}
+
+.edit-block-outputs {
+    grid-area: outputs;
+}
+
+.edit-block-submit {
+    grid-area: submit;
+    justify-self: end;
+}
+
+.edit-block-cancel {
+    grid-area: cancel;
+    justify-self: start;
+}
+
+.edit-block-submit,
+.edit-block-cancel {
+    border: 0;
+    height: 2rem;
+    padding: 0 1rem;
+}
+
+/* .edit-block-container input[type='number']{
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+} */

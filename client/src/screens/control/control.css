@@ -1,0 +1,239 @@
+.control-word-container {
+    margin: 2rem;
+}
+
+.control-word-table {
+    border: 0;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.control-word-table td{
+    text-align: center;
+    padding: 0.4rem 0;
+}
+
+.nodes-container {
+    margin-top: 4rem;
+    margin-left: 2rem;
+    padding: 0.5rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.node-card {
+    width: 15rem;
+    height: 20rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.node-card h1 {
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.node-card-subtitle {
+    font-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+.node-card-ports {
+    display: flex;
+    flex-direction: column;
+}
+
+.node-card-horizontal-line {
+    margin: 0.5rem auto;
+    width: 80%;
+    border-top: 1px solid #dbdbdb;
+}
+
+.node-card-port {
+    display: inline-flex;
+}
+
+.node-card-port p {
+    padding: 0 2rem;
+    margin: 0.5rem 0;
+}
+
+.node-card-port input {
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.control-word-save {
+    width: 10rem;
+    height: 2rem;
+    border: 0;
+    border-radius: 3px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ----------------------- */
+/* Edit micro instructions */
+/* ----------------------- */
+
+.edit-mInstr-title {
+    padding: 0 2rem;
+}
+
+.edit-mInstr-add {
+    margin: 2rem auto;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    border-radius: 2rem;
+}
+
+.edit-mInstr-list {
+    height: 60%;
+    overflow: auto;
+}
+
+.edit-mInstr-table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.edit-mInstr-table tr {
+    height: 3rem;
+}
+
+.edit-mInstr-table td {
+    border-bottom: 1px solid grey;
+}
+
+.edit-mInstr-table th {
+    text-align: left;
+}
+
+.edit-mInstr-edit {
+    width: 90%;
+    height: 10rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin: 0 auto;
+}
+
+.edit-mInstr-edit-form {
+    display: flex;
+    height: 70%;
+}
+
+.edit-mInstr-edit-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.edit-mInstr-edit-save {
+    border: 0;
+    width: 5rem;
+    height: 2rem;
+}
+
+/* .edit-mInstr-edit-item-name input{
+    width: 9rem;
+} */
+
+.edit-mInstr-edit-item-signals {
+    width: 10rem;
+}
+
+/* .edit-mInstr-edit-item-signals input:invalid {
+    border: 1px solid red;
+}
+
+.edit-mInstr-edit-item-signals input:invalid {
+    border: 1px solid green;
+} */
+
+/* Control Flow */
+
+.control-flow-container {
+    width: 100%;
+    height: 100%;
+}
+
+.select-item {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    /* background-color: #9fe17a66; */
+}
+
+.select-item button {
+    /* background-color: blue; */
+}
+
+.select-item-mInstr-container, .select-item-cond-sig-container {
+    height: 40%;
+}
+
+.select-item-title {
+    text-align: center;
+}
+
+.select-item-mInstr {
+    display: inline-grid;
+    width: 100%;
+}
+
+.select-item-mInstr button {
+    height: 2rem;
+    border: 0;
+}
+
+.flow-container {
+    width: 80%;
+    height: 100%;
+    margin-left: 20%;
+}
+
+.m-instr-node {
+    padding: 0px 2rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.node-m-instr {
+    background-color: #d2a4d2;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.node-conditional {
+    background-color: #ffff84;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.select-condition {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    z-index: 100;
+    padding: 0.5rem;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.select-condition button {
+    display: block;
+    margin: 0.8rem auto;
+    margin-bottom: 0.2rem;
+    border: 0;
+    padding: 0.3rem;
+}

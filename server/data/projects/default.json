@@ -1,0 +1,692 @@
+{
+    "circuit": {
+        "nodes": [
+            {
+                "id": "mux21657487558991",
+                "type": "blockType",
+                "position": {
+                    "x": -351.39528576603647,
+                    "y": -266.6870057825192
+                },
+                "style": {
+                    "width": "40px",
+                    "height": "80px"
+                },
+                "className": "block-type-node",
+                "data": {
+                    "id": "mux2",
+                    "moduleName": "mux2",
+                    "hash": "c9yaCWJ5c2+tJ6jIYsRYmnoCmJs=",
+                    "parameters": [
+                        {
+                            "name": "N",
+                            "value": {
+                                "value": "8"
+                            }
+                        }
+                    ],
+                    "label": "MUX2",
+                    "size": {
+                        "width": "2",
+                        "height": "4"
+                    },
+                    "ports": [
+                        {
+                            "name": "in_a",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "left",
+                            "directionIdx": "1"
+                        },
+                        {
+                            "name": "in_b",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "left",
+                            "directionIdx": "3"
+                        },
+                        {
+                            "name": "sel",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "top",
+                            "directionIdx": "1"
+                        },
+                        {
+                            "name": "out",
+                            "size": "1",
+                            "type": "out",
+                            "direction": "right",
+                            "directionIdx": "2"
+                        }
+                    ]
+                },
+                "width": 40,
+                "height": 80,
+                "selected": false,
+                "positionAbsolute": {
+                    "x": -351.39528576603647,
+                    "y": -266.6870057825192
+                },
+                "dragging": false
+            },
+            {
+                "width": 60,
+                "height": 40,
+                "id": "register1657487707506",
+                "type": "blockType",
+                "position": {
+                    "x": -657.6346486655375,
+                    "y": -307.86369456343573
+                },
+                "style": {
+                    "width": "60px",
+                    "height": "40px"
+                },
+                "className": "block-type-node",
+                "data": {
+                    "id": "register",
+                    "moduleName": "register",
+                    "hash": "hbPZ9jv96L3C9ld+jQ6E28rpaBU=",
+                    "parameters": [
+                        {
+                            "name": "N",
+                            "value": {
+                                "value": "8"
+                            }
+                        }
+                    ],
+                    "label": "R1",
+                    "size": {
+                        "width": "3",
+                        "height": "2"
+                    },
+                    "ports": [
+                        {
+                            "name": "in",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "left",
+                            "directionIdx": "1"
+                        },
+                        {
+                            "name": "ld",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "top",
+                            "directionIdx": "1"
+                        },
+                        {
+                            "name": "clk",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "top",
+                            "directionIdx": "2"
+                        },
+                        {
+                            "name": "out",
+                            "size": "1",
+                            "type": "out",
+                            "direction": "right",
+                            "directionIdx": "1"
+                        }
+                    ]
+                },
+                "selected": false,
+                "positionAbsolute": {
+                    "x": -657.6346486655375,
+                    "y": -307.86369456343573
+                },
+                "dragging": false
+            },
+            {
+                "width": 60,
+                "height": 40,
+                "id": "register1657487744893",
+                "type": "blockType",
+                "position": {
+                    "x": -654.7398711861181,
+                    "y": -204.404586194405
+                },
+                "style": {
+                    "width": "60px",
+                    "height": "40px"
+                },
+                "className": "block-type-node",
+                "data": {
+                    "id": "register",
+                    "moduleName": "register",
+                    "hash": "hbPZ9jv96L3C9ld+jQ6E28rpaBU=",
+                    "parameters": [
+                        {
+                            "name": "N",
+                            "value": {
+                                "value": "8"
+                            }
+                        }
+                    ],
+                    "label": "PC",
+                    "size": {
+                        "width": "3",
+                        "height": "2"
+                    },
+                    "ports": [
+                        {
+                            "name": "in",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "left",
+                            "directionIdx": "1"
+                        },
+                        {
+                            "name": "ld",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "top",
+                            "directionIdx": "1"
+                        },
+                        {
+                            "name": "clk",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "top",
+                            "directionIdx": "2"
+                        },
+                        {
+                            "name": "out",
+                            "size": "1",
+                            "type": "out",
+                            "direction": "right",
+                            "directionIdx": "1"
+                        }
+                    ]
+                },
+                "selected": false,
+                "positionAbsolute": {
+                    "x": -654.7398711861181,
+                    "y": -204.404586194405
+                },
+                "dragging": false
+            },
+            {
+                "width": 60,
+                "height": 40,
+                "id": "register_1658395449119",
+                "type": "blockType",
+                "position": {
+                    "x": -210.81722037697782,
+                    "y": -259.4095999134714
+                },
+                "style": {
+                    "width": "60px",
+                    "height": "40px"
+                },
+                "className": "block-type-node",
+                "data": {
+                    "id": "register",
+                    "moduleName": "register",
+                    "hash": "hbPZ9jv96L3C9ld+jQ6E28rpaBU=",
+                    "parameters": [
+                        {
+                            "name": "N",
+                            "value": {
+                                "value": "8"
+                            }
+                        }
+                    ],
+                    "label": "ROUT",
+                    "size": {
+                        "width": "3",
+                        "height": "2"
+                    },
+                    "ports": [
+                        {
+                            "name": "in",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "left",
+                            "directionIdx": "1"
+                        },
+                        {
+                            "name": "ld",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "top",
+                            "directionIdx": "1"
+                        },
+                        {
+                            "name": "clk",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "top",
+                            "directionIdx": "2"
+                        },
+                        {
+                            "name": "out",
+                            "size": "1",
+                            "type": "out",
+                            "direction": "right",
+                            "directionIdx": "1"
+                        }
+                    ]
+                },
+                "selected": false,
+                "positionAbsolute": {
+                    "x": -210.81722037697782,
+                    "y": -259.4095999134714
+                },
+                "dragging": false
+            },
+            {
+                "width": 60,
+                "height": 40,
+                "id": "register_1658750394705",
+                "type": "blockType",
+                "position": {
+                    "x": -384.05774338798227,
+                    "y": -385.9595538039199
+                },
+                "style": {
+                    "width": "60px",
+                    "height": "40px"
+                },
+                "className": "block-type-node",
+                "data": {
+                    "id": "register",
+                    "moduleName": "register",
+                    "hash": "hbPZ9jv96L3C9ld+jQ6E28rpaBU=",
+                    "parameters": [
+                        {
+                            "name": "N",
+                            "value": {
+                                "value": "8"
+                            }
+                        }
+                    ],
+                    "label": "RCOND",
+                    "size": {
+                        "width": "3",
+                        "height": "2"
+                    },
+                    "ports": [
+                        {
+                            "name": "in",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "left",
+                            "directionIdx": "1"
+                        },
+                        {
+                            "name": "ld",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "top",
+                            "directionIdx": "1"
+                        },
+                        {
+                            "name": "clk",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "top",
+                            "directionIdx": "2"
+                        },
+                        {
+                            "name": "out",
+                            "size": "2",
+                            "type": "out",
+                            "direction": "right",
+                            "directionIdx": "1"
+                        }
+                    ]
+                },
+                "selected": false,
+                "positionAbsolute": {
+                    "x": -384.05774338798227,
+                    "y": -385.9595538039199
+                },
+                "dragging": false
+            },
+            {
+                "width": 40,
+                "height": 80,
+                "id": "mux2_1658788559834",
+                "type": "blockType",
+                "position": {
+                    "x": -256.98734557892493,
+                    "y": -349.6749061494411
+                },
+                "style": {
+                    "width": "40px",
+                    "height": "80px"
+                },
+                "className": "block-type-node",
+                "data": {
+                    "id": "mux2",
+                    "moduleName": "mux2",
+                    "hash": "c9yaCWJ5c2+tJ6jIYsRYmnoCmJs=",
+                    "parameters": [
+                        {
+                            "name": "N",
+                            "value": {
+                                "value": "8"
+                            }
+                        }
+                    ],
+                    "label": "MUX2a",
+                    "size": {
+                        "width": "2",
+                        "height": "4"
+                    },
+                    "ports": [
+                        {
+                            "name": "in_a",
+                            "size": "2",
+                            "type": "in",
+                            "direction": "left",
+                            "directionIdx": "1"
+                        },
+                        {
+                            "name": "in_b",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "left",
+                            "directionIdx": "3"
+                        },
+                        {
+                            "name": "sel",
+                            "size": "1",
+                            "type": "in",
+                            "direction": "top",
+                            "directionIdx": "1"
+                        },
+                        {
+                            "name": "out",
+                            "size": "1",
+                            "type": "out",
+                            "direction": "right",
+                            "directionIdx": "2"
+                        }
+                    ]
+                },
+                "selected": false,
+                "positionAbsolute": {
+                    "x": -256.98734557892493,
+                    "y": -349.6749061494411
+                },
+                "dragging": false
+            }
+        ],
+        "edges": [
+            {
+                "type": "smoothstep",
+                "source": "register1657487707506",
+                "sourceHandle": "out",
+                "target": "mux21657487558991",
+                "targetHandle": "in_a",
+                "data": {
+                    "sourceLabel": "R1"
+                },
+                "id": "reactflow__edge-register1657487707506out-mux21657487558991in_a",
+                "selected": false,
+                "style": {
+                    "strokeWidth": 3
+                }
+            },
+            {
+                "type": "smoothstep",
+                "source": "register1657487744893",
+                "sourceHandle": "out",
+                "target": "mux21657487558991",
+                "targetHandle": "in_b",
+                "data": {
+                    "sourceLabel": "PC"
+                },
+                "id": "reactflow__edge-register1657487744893out-mux21657487558991in_b"
+            },
+            {
+                "type": "smoothstep",
+                "source": "mux21657487558991",
+                "sourceHandle": "out",
+                "target": "register_1658395449119",
+                "targetHandle": "in",
+                "data": {
+                    "sourceLabel": "MUX2"
+                },
+                "id": "reactflow__edge-mux21657487558991out-register_1658395449119in"
+            },
+            {
+                "type": "smoothstep",
+                "source": "register_1658750394705",
+                "sourceHandle": "out",
+                "target": "mux2_1658788559834",
+                "targetHandle": "in_a",
+                "style": {
+                    "strokeWidth": 3
+                },
+                "id": "reactflow__edge-register_1658750394705out-mux2_1658788559834in_a"
+            },
+            {
+                "type": "smoothstep",
+                "source": "register_1658750394705",
+                "sourceHandle": "out",
+                "target": "mux2_1658788559834",
+                "targetHandle": "sel",
+                "style": {
+                    "stroke": "red"
+                },
+                "id": "reactflow__edge-register_1658750394705out-mux2_1658788559834sel"
+            }
+        ]
+    },
+    "control": {
+        "mInstrFormat": [
+            {
+                "parentNode": "ROUT",
+                "name": "ld",
+                "size": 1
+            },
+            {
+                "parentNode": "MUX2",
+                "name": "sel",
+                "size": 1
+            }
+        ],
+        "mInstructions": [
+            {
+                "name": "ROUT <- PC",
+                "signals": [
+                    {
+                        "name": "ld",
+                        "value": {
+                            "value": "1"
+                        }
+                    },
+                    {
+                        "name": "sel",
+                        "value": {
+                            "value": "0"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "ROUT <- R1",
+                "signals": [
+                    {
+                        "name": "ld",
+                        "value": {
+                            "value": "1"
+                        }
+                    },
+                    {
+                        "name": "sel",
+                        "value": {
+                            "value": "1"
+                        }
+                    }
+                ]
+            }
+        ],
+        "flow": {
+            "nodes": [
+                {
+                    "id": "ROUT <- R1_1658747067629",
+                    "position": {
+                        "x": -8.5,
+                        "y": 25.5
+                    },
+                    "type": "default",
+                    "data": {
+                        "label": "ROUT <- R1",
+                        "type": "m-instr"
+                    },
+                    "className": "node-m-instr",
+                    "width": 150,
+                    "height": 35,
+                    "selected": false,
+                    "positionAbsolute": {
+                        "x": -8.5,
+                        "y": 25.5
+                    },
+                    "dragging": false
+                },
+                {
+                    "id": "conditional out_1658750565156",
+                    "position": {
+                        "x": -7.5,
+                        "y": 102.5
+                    },
+                    "type": "default",
+                    "data": {
+                        "label": "RCOND out",
+                        "type": "conditional"
+                    },
+                    "className": "node-conditional",
+                    "width": 150,
+                    "height": 35,
+                    "selected": false,
+                    "positionAbsolute": {
+                        "x": -7.5,
+                        "y": 102.5
+                    },
+                    "dragging": false
+                },
+                {
+                    "id": "ROUT <- PC_1658750569600",
+                    "position": {
+                        "x": -96.50000000000003,
+                        "y": 210
+                    },
+                    "type": "default",
+                    "data": {
+                        "label": "ROUT <- PC",
+                        "type": "m-instr"
+                    },
+                    "className": "node-m-instr",
+                    "width": 150,
+                    "height": 35,
+                    "selected": false,
+                    "positionAbsolute": {
+                        "x": -96.50000000000003,
+                        "y": 210
+                    },
+                    "dragging": false
+                },
+                {
+                    "id": "ROUT <- R1_1658750569977",
+                    "position": {
+                        "x": 89.50000000000003,
+                        "y": 211
+                    },
+                    "type": "default",
+                    "data": {
+                        "label": "ROUT <- R1",
+                        "type": "m-instr"
+                    },
+                    "className": "node-m-instr",
+                    "width": 150,
+                    "height": 35,
+                    "selected": false,
+                    "positionAbsolute": {
+                        "x": 89.50000000000003,
+                        "y": 211
+                    },
+                    "dragging": false
+                },
+                {
+                    "id": "ROUT <- R1_1658760207162",
+                    "position": {
+                        "x": 270,
+                        "y": 215.5
+                    },
+                    "type": "default",
+                    "data": {
+                        "label": "ROUT <- R1",
+                        "type": "m-instr"
+                    },
+                    "className": "node-m-instr",
+                    "width": 150,
+                    "height": 35,
+                    "selected": false,
+                    "positionAbsolute": {
+                        "x": 270,
+                        "y": 215.5
+                    },
+                    "dragging": false
+                }
+            ],
+            "edges": [
+                {
+                    "source": "ROUT <- R1_1658747067629",
+                    "sourceHandle": null,
+                    "target": "conditional out_1658750565156",
+                    "targetHandle": null,
+                    "animated": true,
+                    "data": {
+                        "isConditinal": false
+                    },
+                    "id": "reactflow__edge-ROUT <- R1_1658747067629-conditional out_1658750565156"
+                },
+                {
+                    "source": "conditional out_1658750565156",
+                    "sourceHandle": null,
+                    "target": "ROUT <- PC_1658750569600",
+                    "targetHandle": null,
+                    "animated": true,
+                    "data": {
+                        "isConditinal": true
+                    },
+                    "label": "0",
+                    "id": "reactflow__edge-conditional out_1658750565156-ROUT <- PC_1658750569600",
+                    "selected": false
+                },
+                {
+                    "source": "conditional out_1658750565156",
+                    "sourceHandle": null,
+                    "target": "ROUT <- R1_1658750569977",
+                    "targetHandle": null,
+                    "animated": true,
+                    "data": {
+                        "isConditinal": true
+                    },
+                    "label": "1",
+                    "id": "reactflow__edge-conditional out_1658750565156-ROUT <- R1_1658750569977",
+                    "selected": false
+                },
+                {
+                    "source": "conditional out_1658750565156",
+                    "sourceHandle": null,
+                    "target": "ROUT <- R1_1658760207162",
+                    "targetHandle": null,
+                    "animated": true,
+                    "data": {
+                        "isConditinal": true
+                    },
+                    "label": "default",
+                    "id": "reactflow__edge-conditional out_1658750565156-ROUT <- R1_1658760207162",
+                    "selected": false
+                }
+            ]
+        }
+    }
+}

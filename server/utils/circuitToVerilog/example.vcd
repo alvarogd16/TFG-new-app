@@ -1,0 +1,91 @@
+$date
+	Fri Jul 22 18:24:37 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module prueba $end
+$var wire 2 ! cond_sig [1:0] $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ clk $end
+$var reg 2 % next_state [1:0] $end
+$var reg 2 & state [1:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 &
+b10 %
+0$
+0#
+0"
+b0 !
+$end
+#1
+b1 %
+b10 &
+1$
+#2
+0$
+#3
+b0 %
+b1 &
+1$
+#4
+0$
+#5
+b10 %
+b0 &
+1$
+#6
+0$
+#7
+b1 %
+b10 &
+1$
+#8
+0$
+#9
+b0 %
+b1 &
+1$
+#10
+b0 %
+0$
+1#
+b11 !
+1"
+#11
+b1 %
+b0 &
+1$
+#12
+0$
+#13
+b0 %
+b1 &
+1$
+#14
+0$
+#15
+b1 %
+b0 &
+1$
+#16
+0$
+#17
+b0 %
+b1 &
+1$
+#18
+0$
+#19
+b1 %
+b0 &
+1$
+#20
+0$

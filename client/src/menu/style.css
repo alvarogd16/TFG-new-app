@@ -1,0 +1,31 @@
+.main-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 5rem;
+    background-color: gray;
+}
+
+.mm-menu-item {
+    width: 5rem;
+    height: 5rem;
+    border: 0;
+}
+
+.menu-item-focus, .tm-menu-item-focus {
+    background-color: white;
+}
+
+
+.top-menu {
+    margin-left: 10rem;
+    height: 100%;
+}
+
+.tm-menu-item {
+    height: 100%;
+    width: 3rem;
+    border: 0;
+    margin-right: 1rem;
+}

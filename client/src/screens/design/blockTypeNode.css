@@ -1,0 +1,107 @@
+.block-type-node {
+    border: 0;
+    border-radius: 5px;
+    background: white;
+    display: flex;
+    align-items: center;
+    background: #90EE90;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.block-type-container {
+    width: inherit;
+}
+
+.block-type-label-container {
+    text-align: center;
+}
+
+.block-type-label {
+    padding: 0.5rem;
+    font-size: 0.6rem;
+    word-wrap: break-word;
+}
+
+.handle-label {
+    position: absolute;
+    top: 0.5rem;
+}
+
+.design-flow-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.design-flow-container-with-menu {
+    width: 90%;
+}
+
+.design-submenu-container {
+    height: 100%;
+    width: 10%;
+    background-color: grey;
+    position: absolute;
+}
+
+.create-block-button {
+    position: absolute;
+    bottom: 2rem;
+    border: 0;
+    width: 8rem;
+    height: 2rem;
+}
+
+.choose-v-file {
+    text-align: center;
+}
+
+.choose-v-file h2 {
+    font-size: 1.2rem !important;
+    font-weight: lighter;
+}
+
+.choose-v-file p {
+    cursor: pointer;
+}
+
+.block-list {
+    width: 100%;
+}
+
+.block-list-block {
+    display: flex;
+}
+
+.block-list-add {
+    padding: 0;
+    width: 90%;
+    height: 3rem;
+    border: 0;
+    font-size: 1rem;
+}
+
+.block-list-add-io {
+    padding: 0;
+    width: 100%;
+    height: 3rem;
+    border: 0;
+    font-size: 1rem;
+}
+
+.block-list-delete {
+    padding: 0;
+    width: 10%;
+    height: 3rem;
+    border: 0;
+    color: red;
+    font-size: 1.4rem;
+}
+
+.block-list-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.5rem;
+}
