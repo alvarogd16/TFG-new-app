@@ -80,7 +80,8 @@ const DesignCircuit = ({ circuit, setCircuit, editNode, warning, setWarning }) =
 
         console.log(portSrc.size, portDest.size)
         if(portSrc.size !== portDest.size)
-            connection.style = { stroke: 'red' }
+            return
+            // connection.style = { stroke: 'red' }
         else if(portSrc.size > 1)
             connection.style = { strokeWidth: 3 }
         // if(nodeSrc) connection.data = { sourceLabel: nodeSrc.data.label }
