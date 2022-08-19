@@ -16,30 +16,31 @@ const defaultEdgeOptions = {
 
 const nodeTypes = { blockType: BlockTypeNode }
 
-const DesignScreen = ({ subState, setSubState, circuit, setCircuit }) => {
+const DesignScreen = ({ headerState, setHeaderState, circuit, setCircuit }) => {
     const [warning, setWarning] = useState('')
     const [nodeToEdit, setNodeToEdit] = useState()
     const editNode = useCallback((node) => {
         setNodeToEdit(node)
-        setSubState('editNode')
+        setHeaderState({ state: 'editNode' })
     })
+    const subState = headerState?.state;
   
     return (
         <>
-            {subState === 'Añadir bloque' 
+            {subState === 'addNode' 
                 && <AddNode
                     circuit={circuit}
                     setCircuit={setCircuit}
                 ></AddNode>}
 
-            {subState === 'Create block'
+            {subState === 'createBlock'
                 && <CreateBlock
-                    cancel={() => setSubState('')}
+                    cancel={() => setHeaderState({state: ''})}
                 ></CreateBlock>
             }
 
-            {(!subState || subState === 'Añadir bloque' || subState === 'Add IO') &&
-            <div className={'design-flow-container' + (subState==='Añadir bloque' || subState === 'Add IO' ? ' design-flow-container-with-menu' : '')}>
+            {(!subState || subState === 'addNode' || subState === 'addIO') &&
+            <div className={'design-flow-container' + (subState==='addNode' || subState === 'addIO' ? ' design-flow-container-with-menu' : '')}>
                 <DesignCircuit
                     circuit={circuit}
                     setCircuit={setCircuit}
@@ -59,10 +60,10 @@ const DesignScreen = ({ subState, setSubState, circuit, setCircuit }) => {
                 circuit={circuit}
                 setCircuit={setCircuit}
                 node={nodeToEdit}
-                cancel={() => setSubState('')}
+                cancel={() => setHeaderState({state: ''})}
             ></EditBlock>}
 
-            {subState === 'Add IO' &&
+            {subState === 'addIO' &&
             <AddIO></AddIO>}
         </>)
 }

@@ -13,13 +13,13 @@ code {
 }
 
 header {
-    height: 3rem;
-    background-color: black;
+    height: 5rem;
+    background-color: #fdd140;
 }
 
 .main {
     position: absolute;
-    margin-top: 3rem;
+    margin-left: 6rem;
     top: 0;
     left: 0;
     right: 0;

@@ -55,10 +55,11 @@ const AddNode = ({ circuit, setCircuit }) => {
                 >
                     {block.moduleName}
                 </button>
-                <button
+                {/* <div className='block-list-line'></div> */}
+                {/* <button
                     className='block-list-delete'
                 >-
-                </button>
+                </button> */}
             </div>
             )}
         </div>

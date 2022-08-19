@@ -5,18 +5,13 @@ import ControlFlow from './controlFlow/controlFlow'
 import './control.css'
 
 const CONTROL_STATES = {
-    createMicroInstrFormat: 'μInstr format',
-    editMicroInstructions: 'edit μInstr',
+    createMicroInstrFormat: 'mInstrFormat',
+    editMicroInstructions: 'editMInstr',
     controlFlow: 'controlFlow'
 }
 
-const ControlScreen = ({ control, setControl, circuit, subState }) => {
-    const [controlState, setControlState] = useState(subState)
-
-    // useEffect(() => {
-    //     console.log(subState)
-    // }, [subState])
-
+const ControlScreen = ({ control, setControl, circuit, headerState, setHeaderState }) => {
+    const subState = headerState.state
     return (
         <>
             {!subState &&
@@ -31,7 +26,7 @@ const ControlScreen = ({ control, setControl, circuit, subState }) => {
                     control={control}
                     setControl={setControl}
                     circuit={circuit}
-                    next={() => setControlState(CONTROL_STATES.editMicroInstructions)}
+                    next={() => setHeaderState({ state: CONTROL_STATES.editMicroInstructions })}
                 ></EditMicroInstrFormat>}
             {subState === CONTROL_STATES.editMicroInstructions &&
                 <EditMInstrScreen
