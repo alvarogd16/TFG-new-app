@@ -4,9 +4,14 @@
     margin: 2rem auto;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 10px;
+    font-family: sans-serif;
+    font-weight: 500;
 }
 
 .edit-block-container h1 {
+    font-family: sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1em;
     margin: 0 2rem;
     padding: 1rem 0;
 }
@@ -72,6 +77,12 @@
     border: 0;
     height: 2rem;
     padding: 0 1rem;
+}
+
+.edit-block-inputs h2, .edit-block-outputs h2 {
+    font-family: sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1em;
 }
 
 /* .edit-block-container input[type='number']{

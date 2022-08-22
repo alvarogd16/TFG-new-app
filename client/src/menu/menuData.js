@@ -1,5 +1,6 @@
 import APP_STATES from '../states/appStates'
 import ButtonList from '../header/templates/buttonList'
+import ControlButtons from '../header/templates/controlButtons'
 import ChipIcon from '../assets/icons/chipIcon'
 import ControlIcon from '../assets/icons/controlIcon'
 import ISAIcon from '../assets/icons/isaIcon'
@@ -61,7 +62,7 @@ const menuData_2 = [
         text: 'sim',         // Lateral menu name
         icon: SimIcon,
         topMenu: {
-            template: ButtonList,
+            template: ControlButtons,
             data: [
             ]
         }

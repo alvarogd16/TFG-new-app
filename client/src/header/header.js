@@ -1,5 +1,6 @@
 import React from 'react'
 import TopMenu from '../menu/topMenu/topMenu'
+import './index.css'
 
 const Header_2 = ({template, data, state, setState}) => {
     const Template = template

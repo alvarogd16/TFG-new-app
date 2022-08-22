@@ -82,6 +82,8 @@
 
 .choose-v-file p {
     cursor: pointer;
+    max-width: 30%;
+    margin: 1rem auto;
 }
 
 .choose-v-file p:hover {
@@ -97,7 +99,7 @@
     display: flex;
 }
 
-.block-list-add {
+.block-list-add, .block-list-add-io {
     padding: 0;
     width: 100%;
     height: 3rem;
@@ -110,7 +112,7 @@
     cursor: pointer;
 }
 
-.block-list-add:hover {
+.block-list-add:hover, .block-list-add-io:hover {
     background-color: #fdd140;
     color: #000;
 }
@@ -120,13 +122,13 @@
     width: 90%;
 }
 
-.block-list-add-io {
+/* .block-list-add-io {
     padding: 0;
     width: 100%;
     height: 3rem;
     border: 0;
     font-size: 1rem;
-}
+} */
 
 .block-list-delete {
     padding: 0;

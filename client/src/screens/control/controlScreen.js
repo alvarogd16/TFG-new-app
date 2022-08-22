@@ -11,6 +11,7 @@ const CONTROL_STATES = {
 }
 
 const ControlScreen = ({ control, setControl, circuit, headerState, setHeaderState }) => {
+    useEffect(() => setHeaderState({ state: '' }), [])
     const subState = headerState.state
     return (
         <>

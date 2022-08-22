@@ -1,0 +1,37 @@
+.top-menu-sim {
+    gap: 1rem;
+}
+
+.sim-init {
+    height: 2.5rem;
+    width: 5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.sim-init:hover {
+    color: #fdd140;
+}
+
+.sim-init:disabled, .sim-button:disabled {
+    opacity: 0.7;
+    cursor: initial;
+    color: #fff;
+}
+
+.sim-button {
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 0;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}

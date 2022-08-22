@@ -1,11 +1,21 @@
 .control-word-container {
     margin: 2rem;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.control-word-container h1 {
+    font-weight: 900;
+    letter-spacing: 0.1em;
 }
 
 .control-word-table {
     border: 0;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: #000;
+    color: #fdd140;
+    padding: 1rem;
 }
 
 .control-word-table td{
@@ -29,6 +39,8 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     display: inline-block;
     margin-right: 2rem;
+    font-family: sans-serif;
+    font-weight: 500;
 }
 
 .node-card h1 {
@@ -36,6 +48,8 @@
     text-align: center;
     font-size: 1.6rem;
     margin: 0;
+    font-weight: 900;
+    letter-spacing: 0.1em;
 }
 
 .node-card-subtitle {
@@ -71,11 +85,22 @@
 
 .control-word-save {
     width: 10rem;
-    height: 2rem;
+    height: 3rem;
     border: 0;
     border-radius: 3px;
     display: block;
     margin: 0 auto;
+    color: #fff;
+    background-color: #000;
+    font-family: sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+.control-word-save:hover {
+    color: #fdd140;
 }
 
 /* ----------------------- */
@@ -84,6 +109,9 @@
 
 .edit-mInstr-title {
     padding: 0 2rem;
+    font-family: sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1em;
 }
 
 .edit-mInstr-add {
@@ -169,8 +197,14 @@
 .select-item {
     position: absolute;
     height: 100%;
-    width: 20%;
-    /* background-color: #9fe17a66; */
+    width: 18%;
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .select-item button {
@@ -191,14 +225,30 @@
 }
 
 .select-item-mInstr button {
-    height: 2rem;
+    /* height: 2rem;
+    border: 0; */
+
+    padding: 0;
+    width: 100%;
+    height: 2.5rem;
     border: 0;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 500;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.select-item-mInstr button:hover {
+    background-color: #fdd140;
+    color: #000;
 }
 
 .flow-container {
-    width: 80%;
+    width: 82%;
     height: 100%;
-    margin-left: 20%;
+    margin-left: 18%;
 }
 
 .m-instr-node {

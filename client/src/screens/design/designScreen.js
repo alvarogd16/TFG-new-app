@@ -23,6 +23,8 @@ const DesignScreen = ({ headerState, setHeaderState, circuit, setCircuit }) => {
         setNodeToEdit(node)
         setHeaderState({ state: 'editNode' })
     })
+
+    useEffect(() => setHeaderState({ state: '' }), [])
     const subState = headerState?.state;
   
     return (
