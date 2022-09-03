@@ -11,7 +11,7 @@ import { get, post, put } from "../../../api/api"
                         name: input.name, 
                         direction: 'left', 
                         directionIdx: 0, 
-                        size: input.size | '1',
+                        size: input.size || '1',
                         type: 'in' 
                     }))
     return inputs
@@ -20,7 +20,7 @@ import { get, post, put } from "../../../api/api"
                 name: output.name,
                 direction: 'right', 
                 directionIdx: 0,
-                size: output.size | '1',
+                size: output.size || '1',
                 type: 'out' 
             })))
 }

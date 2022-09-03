@@ -27,34 +27,28 @@ const {TOKEN_TYPES, PORT_TYPES, numberToDecimal} = require('./constants.js')
     let object = {moduleName: "", parameters: [], inputs: [], outputs: []}
     let current = 0;
 
-    const _transformRangeToSize = (range) => {
+    const _transformRangeToSize2 = (range) => {
         // By now not support parameters
         // Neither math expresions
-
-        if(range.length > 4) return "1"
-
-        let size = "";
 
         // Skip '['
         let _current = 1;
 
         // First number
-        let number = range[_current].value;
+        let firstNumber = range[_current].value;
         if(range[_current].base)
-            number = numberToDecimal(number, range[_current].base)
-        size += number;
+            firstNumber = numberToDecimal(number, range[_current].base)
         _current++;
 
-        size += range[_current].type;
+        // Skip ':'
         _current++;
 
         // Second number
-        number = range[_current].value;
+        let secondNumber = range[_current].value;
         if(range[_current].base)
-            number = numberToDecimal(number, range[_current].base)
-        size += number;
+            secondNumber = numberToDecimal(number, range[_current].base)
 
-        return size;
+        return (firstNumber - secondNumber + 1).toString();
     }
 
 
@@ -193,7 +187,7 @@ const {TOKEN_TYPES, PORT_TYPES, numberToDecimal} = require('./constants.js')
             }
 
             if(data[current][portListIdx][0].type === TOKEN_TYPES.openBracket) {
-                size = _transformRangeToSize(data[current][portListIdx])
+                size = _transformRangeToSize2(data[current][portListIdx])
                 portListIdx++;
             }
 
