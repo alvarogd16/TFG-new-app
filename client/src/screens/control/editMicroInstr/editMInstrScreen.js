@@ -2,85 +2,7 @@ import { useEffect, useState } from "react"
 import ListMInstr from "./listMInstr"
 import EditMInstrContainer from "./editMInstrContainer"
 import { post } from "../../../api/api"
-
-const microInstrMock = [
-    {
-        name: 'mov',
-        signals: [
-            {
-                name: 'in1',
-                value: {
-                    size: 2,
-                    format: 'b',
-                    value: '11'
-                }
-            },
-            {
-                name: 'in2',
-                value: {
-                    size: 3,
-                    format: 'b',
-                    value: '111'
-                }
-            }
-        ]
-    },
-    {
-        name: 'add',
-        signals: [
-            {
-                name: 'in1',
-                value: {
-                    size: 2,
-                    format: 'b',
-                    value: '00'
-                }
-            },
-            {
-                name: 'in2',
-                value: {
-                    size: 3,
-                    format: 'b',
-                    value: '111'
-                }
-            }
-        ]
-    },
-    {
-        name: 'and',
-        signals: [
-            {
-                name: 'in1',
-                value: {
-                    size: 2,
-                    format: 'b',
-                    value: '11'
-                }
-            },
-            {
-                name: 'in2',
-                value: {
-                    size: 3,
-                    format: 'b',
-                    value: '101'
-                }
-            }
-        ]
-    }
-]
-
-const mInstrFormatMock = [
-    {
-        name: "in1",
-        size: 2,
-        parentNode: "parent1"
-    },
-    {
-        name: "in2",
-        size: 3,
-        parentNode: "parent2"
-    }
-]
+import Translations from "../../../utils/translations/translation"
 
 const EditMInstrScreen = ({ control, setControl }) => {
     const [showEditMInstr, setShowEditMInstr] = useState(false)
@@ -132,7 +54,7 @@ const EditMInstrScreen = ({ control, setControl }) => {
     }
 
     return <>
-        <h1 className='edit-mInstr-title'>Micro Instrucciones</h1>
+        <h1 className='edit-mInstr-title'>{Translations['M_INSTR']}</h1>
         <ListMInstr 
             mInstructions={control.mInstructions}
             mInstrFormat={control.mInstrFormat}

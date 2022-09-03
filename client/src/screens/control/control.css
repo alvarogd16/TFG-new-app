@@ -98,6 +98,7 @@
     letter-spacing: 0.1em;
     transition: all 0.2s ease-out;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .control-word-save:hover {
@@ -123,7 +124,7 @@
 .edit-mInstr-edit-save,
 .edit-mInstr-edit-cancel  {
     display: block;
-    width: 5rem;
+    width: 6rem;
     height: 2rem;
     border: 0;
     background: #000;
@@ -133,6 +134,7 @@
     letter-spacing: 0.1em;
     cursor: pointer;
     transition: all 0.2s ease-out;
+    text-transform: uppercase;
 }
 
 .edit-mInstr-add:hover,
@@ -233,7 +235,7 @@
 }
 
 .select-item-mInstr-container, .select-item-cond-sig-container {
-    height: 40%;
+    height: 50%;
 }
 
 .select-item-title {
@@ -243,6 +245,8 @@
 .select-item-mInstr {
     display: inline-grid;
     width: 100%;
+    overflow-y: scroll;
+    height: 100%;
 }
 
 .select-item-mInstr button {

@@ -17,5 +17,8 @@
     "UP": "Arriba",
     "BOTTOM": "Abajo",
     "SAVE": "Guardar",
-    "CANCEL": "Cancelar"
+    "CANCEL": "Cancelar",
+    "M_INSTR_FORMAT": "Formato de microinstrucción",
+    "M_INSTR": "Micro instrucciones",
+    "ADD": "Añadir"
 }

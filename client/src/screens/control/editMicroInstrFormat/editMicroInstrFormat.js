@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { post } from "../../../api/api"
+import Translations from "../../../utils/translations/translation"
 import MicroInstrFormatContainer from "./microInstrFormatContainer"
 import NodesContainer from "./nodesContainer"
 
@@ -23,7 +24,7 @@ const EditMicroInstrFormat = ({ circuit, control, setControl, next }) => {
         <div className='control-word-container'>
             <MicroInstrFormatContainer microInstrFormat={microInstrFormat}></MicroInstrFormatContainer>
         </div>
-        <button className='control-word-save' onClick={save}>SAVE</button>
+        <button className='control-word-save' onClick={save}>{Translations['SAVE']}</button>
     </>
 }
 

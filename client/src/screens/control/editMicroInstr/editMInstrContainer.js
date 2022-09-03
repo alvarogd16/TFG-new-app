@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Translations from "../../../utils/translations/translation"
 
 const isValidMInstr = (mInstr, mInstrFormat) => {
     if(!mInstr?.name) return false
@@ -52,7 +53,7 @@ const EditMInstrContainer = ({ mInstr, mInstrFormat, saveMInstr, cancelMInstr })
     return <div className='edit-mInstr-edit'>
         <div className='edit-mInstr-edit-form'>
             <div className='edit-mInstr-edit-item-name '>
-                <p>Name</p>
+                <p>{Translations['NAME']}</p>
                 <input
                     defaultValue={newMicroInstr?.name || ''}
                     onChange={setName}
@@ -74,8 +75,8 @@ const EditMInstrContainer = ({ mInstr, mInstrFormat, saveMInstr, cancelMInstr })
             </div>)}
         </div>
         <div className='edit-mInstr-edit-buttons'>
-            <button className='edit-mInstr-edit-save' onClick={save}>SAVE</button>
-            <button className='edit-mInstr-edit-cancel' onClick={cancelMInstr}>CANCEL</button>
+            <button className='edit-mInstr-edit-save' onClick={save}>{Translations['SAVE']}</button>
+            <button className='edit-mInstr-edit-cancel' onClick={cancelMInstr}>{Translations['CANCEL']}</button>
         </div>
     </div>
 }

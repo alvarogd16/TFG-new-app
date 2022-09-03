@@ -1,6 +1,8 @@
+import Translations from "../../../utils/translations/translation"
+
 const MicroInstrFormatContainer = ({ microInstrFormat }) => {
     return <>
-        <h1>Microinstruction format</h1>
+        <h1>{Translations['M_INSTR_FORMAT']}</h1>
         <table className='control-word-table'>
             <thead>
                 <tr>
