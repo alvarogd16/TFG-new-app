@@ -9,10 +9,11 @@ const SimulationScreen = ({ circuit, headerState, setHeaderState }) => {
 
     useEffect(() => {
         // Conect ws
-        socket = io()
+        socket = io('/clients')
 
         // Bind events
         socket.on('client:finishInit', () => {
+            console.log('finish')
             setHeaderState({ state: 'ready' })
         })
 

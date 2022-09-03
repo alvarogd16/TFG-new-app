@@ -1,0 +1,69 @@
+.ISA-screen {
+    display: flex;
+    height: 100%;
+}
+
+.ISA-info {
+    flex: 0 0 50%;
+}
+
+.ISA-edit {
+    flex: 0 0 50%;
+    height: 100%;
+}
+
+.choose-memory {
+    height: 2.5rem;
+    font-size: 1rem;
+    border: 0;
+    padding: 0.5rem;
+    width: 10rem;
+    background-color: #000;
+    color: #fff;
+    margin: 2rem 0;
+}
+
+.save-memory {
+    height: 2.5rem;
+    font-size: 1rem;
+    border: 0;
+    padding: 0.5rem;
+    width: 6rem;
+    background-color: #000;
+    color: #fff;
+    margin: auto 2rem;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+}
+
+.save-memory:hover {
+    color: #fdd140;
+}
+
+.editor {
+    resize: none;
+    width: 90%;
+    height: 80%;
+    font-size: 1rem;
+    margin: 0;
+    border-radius: 0;
+    border: 1px solid #000;
+}
+
+.ISA-isa-container {
+    border: 1px solid #000;
+    width: 90%;
+    margin-left: 2rem;
+    height: 80%;
+    overflow-y: scroll;
+    padding: 2px;
+}
+
+.ISA-info-title {
+    height: 2.5rem;
+    padding: 2rem;
+    font-family: sans-serif;
+    font-weight: 500;
+}

@@ -4,6 +4,7 @@ const controlToVerilog = require('./controlToVerilog.js')
 const PROYECT_FILE = '../../data/projects/default.json'
 const VERILOG_FILES = './verilogFiles'
 const DEST_FILE = '../../data/vOut.v'
+const DEST_FILE_SIGNALS_INFO = '../../data/signalsInfo.txt'
 const MAIN_MODULE = 'main_' + Date.now()
 
 const getIntermediateSignals = (circuit, control) => {
@@ -13,19 +14,24 @@ const getIntermediateSignals = (circuit, control) => {
     signals += '//-----------------------------\n\n'
     signals += '//---- Outputs ----\n'
 
+    let signalsInfo = ''
+
     circuit.nodes.forEach(node => {
         node.data.ports.forEach(port => {
-            if(port.type === 'out')
-                signals += `wire [${port.size-1}:0] ${node.data.label}_${port.name};\n`
+            if(port.type === 'out') {
+                signals += `output wire [${port.size-1}:0] ${node.data.label}_${port.name};\n`
+                signalsInfo += `${node.data.label}_${port.name}\n`
+            }
         })
     })
 
     signals += '//---- Inputs ----\n'
     control.mInstrFormat.forEach(signal => {
-        signals += `wire [${signal.size-1}:0] ${signal.parentNode}_${signal.name};\n`
+        signals += `output wire [${signal.size-1}:0] ${signal.parentNode}_${signal.name};\n`
+        signalsInfo += `${signal.parentNode}_${signal.name}\n`
     })
 
-    return signals + '\n'
+    return { fileContent: signals + '\n', fileSignalsInfo: signalsInfo }
 }
 
 const getModuleIncludes = (circuit) => {
@@ -104,6 +110,10 @@ const getModulesInstances = (circuit, control) => {
     return instances
 }
 
+const generateSignalsInfoFile = (data) => {
+    fs.writeFileSync(DEST_FILE_SIGNALS_INFO, data)
+}
+
 const circuitToVerilog = () => {
     const state = JSON.parse(fs.readFileSync(PROYECT_FILE))
 
@@ -113,12 +123,16 @@ const circuitToVerilog = () => {
     let fileContent = ''
     fileContent += getModuleIncludes(circuit)
     fileContent += 'module ' + MAIN_MODULE + ' (input clk);\n\n'
-    fileContent += getIntermediateSignals(circuit, control)
+
+    const signalsInfo = getIntermediateSignals(circuit, control)
+    fileContent += signalsInfo.fileContent
+    generateSignalsInfoFile(signalsInfo.fileSignalsInfo)
+
     fileContent += getModulesInstances(circuit, control)
     fileContent += controlToVerilog(control)
     fileContent += 'endmodule'
 
-    console.log(fileContent)
+    // console.log(fileContent)
     fs.writeFileSync(DEST_FILE, fileContent)
 }
 

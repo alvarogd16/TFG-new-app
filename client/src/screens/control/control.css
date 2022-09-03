@@ -16,6 +16,7 @@
     background-color: #000;
     color: #fdd140;
     padding: 1rem;
+    height: 8rem;
 }
 
 .control-word-table td{
@@ -116,11 +117,31 @@
 
 .edit-mInstr-add {
     margin: 2rem auto;
+}
+
+.edit-mInstr-add,
+.edit-mInstr-edit-save,
+.edit-mInstr-edit-cancel  {
     display: block;
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 2rem;
     border: 0;
-    border-radius: 2rem;
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.edit-mInstr-add:hover,
+.edit-mInstr-edit-save:hover {
+    color: #fdd140;
+}
+
+.edit-mInstr-edit-cancel:hover {
+    color: rgb(172, 0, 0);
 }
 
 .edit-mInstr-list {
@@ -165,11 +186,11 @@
     gap: 3rem;
 }
 
-.edit-mInstr-edit-save {
+/* .edit-mInstr-edit-save {
     border: 0;
     width: 5rem;
     height: 2rem;
-}
+} */
 
 /* .edit-mInstr-edit-item-name input{
     width: 9rem;
@@ -259,13 +280,14 @@
 }
 
 .node-m-instr {
-    background-color: #d2a4d2;
+    background-color: #8e508e;
+    color: #fff;
     border: 0;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .node-conditional {
-    background-color: #ffff84;
+    background-color: #fffd8e;
     border: 0;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }

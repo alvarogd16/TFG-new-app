@@ -5,12 +5,17 @@
     font-weight: 500;
     display: flex;
     align-items: center;
-    background-color: #cca290;
+    background-color: #243662;
     /* background: #FD7240; */
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.block-type-node-selected {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 #label {
+    margin: 0;
     color: #fff;
 }
 
@@ -28,9 +33,27 @@
     word-wrap: break-word;
 }
 
+@keyframes taadaa { 
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
 .handle-label {
     position: absolute;
+    font-size: 0.7rem;
+    z-index: 10;
     top: 0.5rem;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    animation: taadaa 0.2s;
 }
 
 .design-flow-container {

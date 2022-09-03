@@ -84,7 +84,7 @@ const DesignCircuit = ({ circuit, setCircuit, editNode, warning, setWarning }) =
             // connection.style = { stroke: 'red' }
         else if(portSrc.size > 1)
             connection.style = { strokeWidth: 3 }
-        // if(nodeSrc) connection.data = { sourceLabel: nodeSrc.data.label }
+        if(nodeSrc) connection.data = { sourceLabel: nodeSrc.data.label }
         console.log(connection)
         setEdges(addEdge(connection, circuit.edges))
     }, [setEdges])

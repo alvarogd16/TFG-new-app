@@ -1,3 +1,5 @@
+import Translations from "../../../utils/translations/translation"
+
 const portSelectValues = [
     'top',
     'bottom',
@@ -11,7 +13,7 @@ const Port = ({ port, onChange }) => {
         <select value={port.direction} onChange={onChange}>
             {portSelectValues.map(opt => <option key={opt} value={opt}>{opt}</option>)}
         </select>
-        <label>Direction index</label>
+        {/* <label>Direction index</label> */}
         <input type='number' value={port.directionIdx} onChange={onChange}></input>
     </div>
 }
@@ -19,7 +21,7 @@ const Port = ({ port, onChange }) => {
 const PortsContainer = ({ blockPorts, setBlockPorts }) => {
     return <>
         <div className='edit-block-inputs'>
-        <h2>Inputs</h2>
+        <h2>{Translations['INPUTS']}</h2>
         {blockPorts
             .filter(port => port.type === 'in')
             .map(input => 
@@ -44,7 +46,7 @@ const PortsContainer = ({ blockPorts, setBlockPorts }) => {
         )}
     </div>
     <div className='edit-block-outputs'>
-        <h2>Outputs</h2>
+        <h2>{Translations['OUTPUTS']}</h2>
         {blockPorts
             .filter(port => port.type === 'out')
             .map(output => 

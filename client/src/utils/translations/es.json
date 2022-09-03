@@ -1,3 +1,21 @@
 {
-    "CHOOSE_FILE": "Elige tu fichero"
+    "DISEÑO": "Diseño",
+    "CONTROL": "Control",
+    "ISA": "ISA",
+    "SIM": "Sim",
+    "ADD_NODE": "Añadir nodo",
+    "CREATE_BLOCK": "Crear bloque",
+    "CHOOSE_FILE": "Elige tu fichero",
+    "CHOOSE_FILE_SUB": "Si no aprece aquí tu fichero prueba a meterlo en la carpeta verilogFiles del proyecto",
+    "NAME": "Nombre",
+    "WIDTH": "Ancho",
+    "HEIGHT": "Alto",
+    "INPUTS": "Entradas",
+    "OUTPUTS": "Salidas",
+    "RIGHT": "Derecha",
+    "LEFT": "Izquierda",
+    "UP": "Arriba",
+    "BOTTOM": "Abajo",
+    "SAVE": "Guardar",
+    "CANCEL": "Cancelar"
 }

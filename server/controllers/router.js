@@ -18,6 +18,9 @@ const { getState,
 const { getVFilesNames, 
         getFileInfo } = require('./vFiles/vFiles.js')
 
+const { readMemory,
+        writeMemory } = require('./memories/memories.js')
+
         
 // Blocks
 router.get('/blocks', getBlocks)
@@ -40,5 +43,9 @@ router.post('/state/control/flow/edges', updateFlowEdges)
 // Verilog files
 router.get('/vFilesNames', getVFilesNames)
 router.get('/vFile/:fileName', getFileInfo)
+
+// Mmeories
+router.get('/memories/readMemory/:memoryName', readMemory)
+router.post('/memories/writeMemory/:memoryName', writeMemory)
 
 module.exports = router

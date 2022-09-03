@@ -5,11 +5,13 @@ import { get, post, put } from "../../../api/api"
  * @returns An array of ports (inputs and outputs together) with more information
  */
  const getPortsFromMooduleInfo = (moduleInfo) => {
+    console.log(moduleInfo)
     const inputs = moduleInfo?.inputs
                     .map(input => ({ 
                         name: input.name, 
                         direction: 'left', 
                         directionIdx: 0, 
+                        size: input.size | '1',
                         type: 'in' 
                     }))
     return inputs
@@ -17,7 +19,8 @@ import { get, post, put } from "../../../api/api"
             .map(output => ({
                 name: output.name,
                 direction: 'right', 
-                directionIdx: 0, 
+                directionIdx: 0,
+                size: output.size | '1',
                 type: 'out' 
             })))
 }

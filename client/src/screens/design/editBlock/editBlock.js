@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import './style.css'
 import PortsContainer from "./portsContainer"
 import { getDataFromFile, createNewBlock, updateNode } from "./utils"
+import Translations from "../../../utils/translations/translation"
 
 const EditBlock = ({ circuit, setCircuit, node, file, cancel }) => {
     const [blockInfo, setBlockInfo] = useState(node?.data)
@@ -41,7 +42,7 @@ const EditBlock = ({ circuit, setCircuit, node, file, cancel }) => {
         <h1>{blockInfo?.moduleName}</h1>
         <form onSubmit={handleSubmit}>
             <div className='edit-block-label'>
-                <label>Label</label>
+                <label>{Translations['NAME']}</label>
                 <input 
                     type='text'
                     value={blockLabel} 
@@ -49,7 +50,7 @@ const EditBlock = ({ circuit, setCircuit, node, file, cancel }) => {
                 />
             </div>
             <div className='edit-block-width'>
-                <label>Width</label>
+                <label>{Translations['WIDTH']}</label>
                 <input 
                     type='number' 
                     min='2' 
@@ -59,7 +60,7 @@ const EditBlock = ({ circuit, setCircuit, node, file, cancel }) => {
                 />
             </div>
             <div className='edit-block-height'>
-                <label>Height</label>
+                <label>{Translations['HEIGHT']}</label>
                 <input 
                     type='number' 
                     min='2' 
@@ -77,8 +78,8 @@ const EditBlock = ({ circuit, setCircuit, node, file, cancel }) => {
                 blockPorts={blockPorts}
                 setBlockPorts={setBlockPorts}
             />
-            <button className='edit-block-submit' type='submit' value='Submit'>SUBMIT</button>
-            <button className='edit-block-cancel' onClick={cancel} value='Cancel'>CANCEL</button>
+            <button className='edit-block-submit' type='submit' value='Submit'>{Translations['SAVE']}</button>
+            <button className='edit-block-cancel' onClick={cancel} value='Cancel'>{Translations['CANCEL']}</button>
         </form>
     </div>
     }

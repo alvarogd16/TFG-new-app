@@ -75,7 +75,7 @@ const EditMInstrContainer = ({ mInstr, mInstrFormat, saveMInstr, cancelMInstr })
         </div>
         <div className='edit-mInstr-edit-buttons'>
             <button className='edit-mInstr-edit-save' onClick={save}>SAVE</button>
-            <button className='edit-mInstr-edit-save' onClick={cancelMInstr}>CANCEL</button>
+            <button className='edit-mInstr-edit-cancel' onClick={cancelMInstr}>CANCEL</button>
         </div>
     </div>
 }

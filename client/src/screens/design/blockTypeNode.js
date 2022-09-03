@@ -93,14 +93,14 @@ const getHandles = (ports, handleFocusIdx, setHandleFocusIdx) => {
     )
 }
 
-const BlockTypeNode = ({ data }) => {
+const BlockTypeNode = ({ data, selected }) => {
     const [handleFocusIdx, setHandleFocusIdx] = useState('')
 
     // useEffect(() => console.log('render'), [])
     useEffect(() => data?.isValid && data.isValid(),[])
 
     return (
-        <div className='block-type-container'>
+        <div className={'block-type-container' + (selected ? ' block-type-node-selected' : '')}>
             <div className='block-type-handles'>
                 {data.ports && getHandles(data.ports, handleFocusIdx, setHandleFocusIdx)}
             </div>

@@ -24,11 +24,11 @@ const menuData_2 = [
                     icon: 'path/to/icon',
                     text: 'crear bloque'
                 },
-                {
-                    id: 'addIO',
-                    icon: 'path/to/icon',
-                    text: 'añadir io'
-                }
+                // {
+                //     id: 'addIO',
+                //     icon: 'path/to/icon',
+                //     text: 'añadir io'
+                // }
             ]
         }
     },
