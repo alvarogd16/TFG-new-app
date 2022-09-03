@@ -14,7 +14,7 @@ const createNodeFromBlock = (block) => {
         },
         className: 'block-type-node',
         data: {
-            isValid: () => console.log('hola'),
+            isValid: () => { /* TODO */},
             ...block
         }
     }

@@ -31,10 +31,8 @@ const DesignCircuit = ({ circuit, setCircuit, editNode, warning, setWarning }) =
      * The explanation of the newEdges is in the onNodesChange function
      */
     const setNodes = useCallback((newNodes, newEdges) => {
-        // console.log('nodes', newNodes)
         const isMoving = newNodes.some((node) => node?.dragging === true)
         if(!isMoving) {
-            console.log('posting...', newNodes)
             post('/state/circuit/nodes', newNodes)
         }
 
@@ -67,7 +65,6 @@ const DesignCircuit = ({ circuit, setCircuit, editNode, warning, setWarning }) =
     }, [setNodes])
 
     const onEdgesChange = useCallback((changes) => {
-        // console.log('edgedChange')
         setEdges(applyEdgeChanges(changes, circuit.edges))
     }, [setEdges])
 
@@ -78,14 +75,12 @@ const DesignCircuit = ({ circuit, setCircuit, editNode, warning, setWarning }) =
         const portSrc = nodeSrc.data.ports.find(p => p.name === connection.sourceHandle)
         const portDest = nodeDest.data.ports.find(p => p.name === connection.targetHandle)
 
-        console.log(portSrc.size, portDest.size)
         if(portSrc.size !== portDest.size)
             return
             // connection.style = { stroke: 'red' }
         else if(portSrc.size > 1)
             connection.style = { strokeWidth: 3 }
         if(nodeSrc) connection.data = { sourceLabel: nodeSrc.data.label }
-        console.log(connection)
         setEdges(addEdge(connection, circuit.edges))
     }, [setEdges])
 

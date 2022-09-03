@@ -5,7 +5,6 @@ import { get, post, put } from "../../../api/api"
  * @returns An array of ports (inputs and outputs together) with more information
  */
  const getPortsFromMooduleInfo = (moduleInfo) => {
-    console.log(moduleInfo)
     const inputs = moduleInfo?.inputs
                     .map(input => ({ 
                         name: input.name, 
@@ -60,7 +59,6 @@ export const createNewBlock = (blockInfo, blockLabel, blockWidth, blockHeight, b
     }
 
     post('/block', newBlock)
-        .then(res => console.log(res))
 }
 
 const STEP_SIZE = 20
