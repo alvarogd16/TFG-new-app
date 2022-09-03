@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import PlayIcon from "../../assets/icons/playIcon";
 import PauseIcon from "../../assets/icons/pauseIcon";
+import Translations from "../../utils/translations/translation";
 
 const DoubleButton = ({ data, isActive = true }) => {
     const [state, setState] = useState(true);
@@ -54,8 +55,8 @@ const ControlButtons = ({ data, state, setState}) => {
         },
         className_1: 'sim-init',
         className_2: 'sim-init',
-        text_1: "init",
-        text_2: "finish"
+        text_1: Translations['INIT'],
+        text_2: Translations['FINISH']
     };
 
     const runPauseData = {
