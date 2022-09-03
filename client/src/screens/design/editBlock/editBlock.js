@@ -54,7 +54,7 @@ const EditBlock = ({ circuit, setCircuit, node, file, cancel }) => {
                 <input 
                     type='number' 
                     min='2' 
-                    max = '10' 
+                    max = '40' 
                     value={blockWidth}
                     onChange={e => setBlockWidth(e.target.value)}
                 />
@@ -64,7 +64,7 @@ const EditBlock = ({ circuit, setCircuit, node, file, cancel }) => {
                 <input 
                     type='number' 
                     min='2' 
-                    max = '10' 
+                    max = '40' 
                     value={blockHeight}
                     onChange={e => setBlockHeight(e.target.value)}
                 />
