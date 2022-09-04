@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { get, post } from '../../../api/api.js';
+import Translations from "../../../utils/translations/translation.js";
 
 const validateEditorCode = (content, memory) => {
     return content
@@ -36,7 +37,7 @@ const EditMemory = ({ memories }) => {
             onClick={() => {
                 post(`/memories/writeMemory/${memory.name}`, { memoryData: memoryContent })
             }}
-        >SAVE</button>
+        >{Translations['SAVE']}</button>
         <textarea
             className='editor'
             value={memoryContent}

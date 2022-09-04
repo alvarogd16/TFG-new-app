@@ -3,7 +3,7 @@ import Translations from "../../../utils/translations/translation"
 const MicroInstrRow = ({ mInstr, editMInstr, deleteMInstr }) => {
     return <tr>
         <td>{mInstr.name}</td>
-        {mInstr.signals.map(sig => <td key={sig.name}>{sig.value.value}</td>)}
+        {mInstr.signals.map(sig => <td key={sig.parentNode+sig.name}>{sig.value.value}</td>)}
         <td>
             <button onClick={() => editMInstr(mInstr)}>E</button>
             <button onClick={() => deleteMInstr(mInstr)}>D</button>
@@ -17,7 +17,7 @@ const ListMInstr = ({ mInstructions, mInstrFormat, addMInstr, editMInstr, delete
             <thead>
                 <tr>
                     <th>{Translations['NAME']}</th>
-                    {mInstrFormat.map(sig => <th key={sig.name}>{sig.parentNode + ' ' + sig.name}</th>)}
+                    {mInstrFormat.map(sig => <th key={sig.parentNode+sig.name}>{sig.parentNode + ' ' + sig.name}</th>)}
                 </tr>
             </thead>
             <tbody>

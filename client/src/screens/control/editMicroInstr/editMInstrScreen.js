@@ -48,6 +48,7 @@ const EditMInstrScreen = ({ control, setControl }) => {
         if(mInstrIdx !== -1) {
             newMInstr.splice(mInstrIdx, 1)
             newControl.mInstructions = newMInstr
+            post('/state/control/mInstructions', newMInstr)
             setControl(newControl)
         }
 

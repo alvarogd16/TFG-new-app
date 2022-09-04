@@ -6,7 +6,7 @@ const isValidMInstr = (mInstr, mInstrFormat) => {
     if(!mInstr?.signals) return false
 
     for(let i = 0; i < mInstrFormat.length; i++) {
-        const signal = mInstr.signals.find(sig => sig.name === mInstrFormat[i].name)
+        const signal = mInstr.signals.find(sig => sig.name === mInstrFormat[i].name && sig.parentNode === mInstrFormat[i].parentNode)
         if(!signal || !signal?.value?.value)
             return false
     }
@@ -29,11 +29,12 @@ const EditMInstrContainer = ({ mInstr, mInstrFormat, saveMInstr, cancelMInstr })
     }
 
     const setSignal = ({ target }) => {
-        const newSignal = { name: target.name, value: {value: target.value} }
+        const [sigParent, sigName] = target.name.split('/')
+        const newSignal = { name: sigName, parentNode: sigParent, value: {value: target.value} }
         const newMicroInstrCopy = {...newMicroInstr}
         const newSignals = newMicroInstrCopy?.signals ? [...newMicroInstrCopy.signals] : []
 
-        const signalIdx = newSignals.findIndex(sig => sig.name === target.name)
+        const signalIdx = newSignals.findIndex(sig => sig.name === sigName && sig.parentNode === sigParent)
         if(signalIdx !== -1)
             newSignals[signalIdx] = newSignal
         else
@@ -61,16 +62,16 @@ const EditMInstrContainer = ({ mInstr, mInstrFormat, saveMInstr, cancelMInstr })
                     maxLength={20}
                 ></input>
             </div>
-            {mInstrFormat.map(sig => <div key={sig.name} className='edit-mInstr-edit-item-signals'>
+            {mInstrFormat.map(sig => <div key={sig.parentNode+sig.name} className='edit-mInstr-edit-item-signals'>
                 <p>{sig.parentNode + ' ' + sig.name}</p>
                 <input 
-                    defaultValue={newMicroInstr?.signals?.find(_sig => _sig.name === sig.name)?.value?.value || ''}
+                    defaultValue={newMicroInstr?.signals?.find(_sig => _sig.name === sig.name && _sig.parentNode === sig.parentNode)?.value?.value || ''}
                     onChange={setSignal}
-                    name={sig.name}
+                    name={sig.parentNode + '/' + sig.name}
                     type='text'
                     maxLength={sig.size}
                     size={sig.size}
-                    // pattern={'[01xX]+'}
+                    pattern={'[01xX]+'}
                 ></input>
             </div>)}
         </div>
