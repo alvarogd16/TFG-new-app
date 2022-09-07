@@ -133,7 +133,7 @@ io.of("/simulator").on("connection", (socket) => {
 })
 
 // Have Node serve the files for our built React app
-// app.use(express.static(path.resolve(__dirname, '../client/build')));
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 app.use(notFound)
 app.use(handleErrors)

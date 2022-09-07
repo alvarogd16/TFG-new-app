@@ -284,15 +284,15 @@
 }
 
 .node-m-instr {
-    background-color: #8e508e;
-    color: #fff;
-    border: 0;
+    background-color: #8e508e !important;
+    color: #fff !important;
+    border: 0 !important;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .node-conditional {
-    background-color: #fffd8e;
-    border: 0;
+    background-color: #fffd8e !important;
+    border: 0 !important;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
